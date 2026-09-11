@@ -212,13 +212,13 @@ main {
   font-size: 1.1em;
 }
 
-.projeto-container {
+#projeto-container {
   display: flex;
   flex-direction: column-reverse;
   gap: 20px;
 }
 
-.projeto-container .projeto {
+#projeto-container > .projeto {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -226,15 +226,16 @@ main {
   padding: 10px;
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
+  transition: border-width 0.4s, border-color 0.4s;
 }
 
-.projeto-container .projeto:hover {
+#projeto-container > .projeto:hover {
   border-color: var(--destaque);
   border-left-width: 15px;
   cursor: pointer;
 }
 
-.projeto .foto {
+.projeto > .foto {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
@@ -264,7 +265,7 @@ footer a:hover {
     grid-template-columns: 1fr 1fr;
   }
 
-  .projeto-container .projeto {
+  #projeto-container .projeto {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
